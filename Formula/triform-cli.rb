@@ -11,10 +11,8 @@ class TriformCli < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.12")
-    venv.pip_install "click>=8.0"
-    venv.pip_install "rich>=13.0"
-    venv.pip_install "pydantic>=2.0"
-    venv.pip_install_and_link buildpath
+    # Install all dependencies including transitive ones
+    venv.pip_install "triform-cli"
   end
 
   test do
