@@ -7,6 +7,7 @@ class TriformCli < Formula
   sha256 "c528521a0b96b4b059fa7f63f1336ff0320291c266a84821edf1e943864b2853"
   license "MIT"
 
+  depends_on "rust" => :build
   depends_on "python@3.12"
 
   resource "click" do
